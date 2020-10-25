@@ -47,7 +47,9 @@ function getAllMoviesFrom2008() {
   Delete the genre you added in the first test
 */
 function deleteGenreYouAdded() {
-   
+  return Genre.findOne({ where: { name: 'romcom'}}).then(genre => {
+    return genre.destroy();
+  });
 }
 
 /*
